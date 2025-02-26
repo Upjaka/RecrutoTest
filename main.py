@@ -5,7 +5,7 @@ app = FastAPI()
 
 @app.get("/")
 def hello(name: str = "Recruto", message: str = "Давай дружить!"):
-    return {f"Hello {name}! {message}"}
+    return {f"Hello {name}! {message}!"}
 
 
 if __name__ == "__main__":
