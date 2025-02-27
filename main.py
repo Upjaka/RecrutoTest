@@ -1,11 +1,14 @@
+import random
+
 from fastapi import FastAPI
 
 app = FastAPI()
 
 
 @app.get("/")
-def hello(name: str = "Recruto", message: str = "Давай дружить!"):
-    return {f"Hello {name}! {message}!"}
+def hello():
+    code = f"{random.randint(1, 9999):04d}"
+    return {"code": code}
 
 
 if __name__ == "__main__":
